@@ -1,0 +1,24 @@
+rpicam-still -o image.jpg (prendre une photo avec la raspCam)
+sudo halt (pour éteindre la rasp)
+lsblk (pour récupérer tous les périphériques de stockage connectés)
+lsusb (pour récupérer tous les périphériques usb)
+ls /dev/video* (pour récupérer les différents flux vidéos)
+
+sudo apt update
+sudo apt install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox (pour installer un environnement graphique minimal)
+
+startx (pour démarrer un serveur X)
+
+sudo apt install ... (pour installer une bibliothèque ou autre)
+
+cd .. (retour arrière dans l'arborescence)
+
+sudo mount /dev/sda1 /mnt/usb (pour monter la clé usb dans le dossier usb)
+
+ls /mnt/usb (pour voir les fichiers de la clé usb)
+
+cp /mnt/usb/test.py /home/pi/Camera_test (pour copier un fichier de la clé vers ton stockage)
+
+sudo umount /mnt/usb (pour démonter la clé usb avant de la retirer)
+
+rm file (pour supprimer un fichier)
