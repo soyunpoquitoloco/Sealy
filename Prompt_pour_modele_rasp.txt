@@ -1,0 +1,2 @@
+Le programme python doit être écrit pour fonctionner sur une raspberry pi model 4 B
+qui utilise raspberrypi OS LITE (donc sans interface graphique) et qui est branché à une caméra picamera.
