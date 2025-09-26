@@ -1,7 +1,4 @@
-from humor import detect_pose  # Import direct de la fonction
 from posture import *  # Idem
-
-
 
 from deepface import DeepFace
 
