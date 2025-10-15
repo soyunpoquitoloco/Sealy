@@ -30,7 +30,7 @@ def distance_2d(a, b):
     return math.sqrt((bx - ax)**2 + (by - ay)**2)
 
 
-def main(cal_left, cal_right):
+def main(cal_left, cal_right, cal_chin):
     mp_drawing = mp.solutions.drawing_utils
     mp_pose = mp.solutions.pose
 
@@ -79,8 +79,9 @@ def main(cal_left, cal_right):
                 posture_avachie = False
                 length_left_side = distance_2d(left_shoulder, left_hip)
                 length_right_side = distance_2d(right_shoulder, right_hip)
+                length_chin = distance_2d(nose, right_shoulder)
 
-                if length_left_side < cal_left and length_right_side < cal_right:
+                if length_chin < cal_chin -0.05:
                     posture_avachie = True
 
                 # Affichage des résultats
@@ -101,7 +102,7 @@ def main(cal_left, cal_right):
     cap.release()
     cv2.destroyAllWindows()
 
-def calibration(cal_left, cal_right):
+def calibration(cal_left, cal_right, cal_chin):
     mp_drawing = mp.solutions.drawing_utils
     mp_pose = mp.solutions.pose
 
@@ -140,6 +141,7 @@ def calibration(cal_left, cal_right):
 
                 cal_left = distance_2d(left_shoulder, left_hip)
                 cal_right = distance_2d(right_shoulder, right_hip)
+                cal_chin = distance_2d(nose, right_shoulder)
                 cv2.putText(image, 'Prendre une posture correcte', (30, 50),
                                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
                 
@@ -155,10 +157,11 @@ def calibration(cal_left, cal_right):
             i += 1
     cap.release()
     cv2.destroyAllWindows()
-    return cal_left,cal_right
+    return cal_left,cal_right, cal_chin
 
 if __name__ == "__main__":
     cal_left = 0
     cal_right = 0
-    cal_left, cal_right = calibration(cal_left,cal_right)
-    main(cal_right,cal_left)
+    cal_chin = 0
+    cal_left, cal_right, cal_chin = calibration(cal_left,cal_right, cal_chin)
+    main(cal_left, cal_right, cal_chin)
