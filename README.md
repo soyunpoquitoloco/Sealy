@@ -226,8 +226,6 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
 
 ## Software setup
 
-> Exact filenames may differ—this section is structured to match the repo’s split between `Programme PC/` and `Rasp/`. :contentReference[oaicite:12]{index=12}
-
 ### 1) PC-side (vision + state server)
 **Expected dependencies:**
 - Python 3.9+
