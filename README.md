@@ -41,7 +41,7 @@ This repo contains the **software**, **hardware notes**, and **fabrication asset
 
 ## Prototype iterations
 
-There are **four physical prototypes**. Below is the reasoning chain between each iteration—what you learned, what broke, and what that implied for the next build.
+There are **four physical prototypes**. 
 
 <img width="972" height="451" alt="Capture d’écran 2026-01-28 à 01 42 11" src="https://github.com/user-attachments/assets/81a566bf-e288-450e-b8f0-e796fcd7b626" />
 
