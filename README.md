@@ -321,8 +321,19 @@ pip install opencv-python mediapipe ultralytics numpy websockets
 3. **Position yourself** in front of the webcam, with Sealy visible in your peripheral vision
 4. **Work naturally** — Sealy will respond to:
    - **Posture drift**: if you slump or lean, Sealy mirrors the motion
+
+<img width="305" height="483" alt="Capture d’écran 2026-01-28 à 02 03 16" src="https://github.com/user-attachments/assets/ef377eea-e30e-4773-8d45-d44310097083" />
+
+
    - **Fatigue signs**: if your eyes close repeatedly, Sealy's eyelids droop
+
+<img width="545" height="412" alt="Capture d’écran 2026-01-28 à 02 03 48" src="https://github.com/user-attachments/assets/f9ee4733-f6c5-416d-846a-ae956ce6440e" />
+
+
    - **Phone checks**: if you pick up your phone, Sealy rotates away from the fishing hole
+
+<img width="416" height="475" alt="Capture d’écran 2026-01-28 à 02 04 12" src="https://github.com/user-attachments/assets/e0f07417-c675-4b09-93da-35c20a8fc567" />
+
 
 ### Interpreting Sealy's cues
 - **Slump motion** → gentle reminder to adjust posture (not a "correction," just mirroring)
@@ -372,6 +383,8 @@ Evaluate whether **nonverbal ambient cues** from Sealy can:
 
 
 ### Demo videos
+
+https://github.com/user-attachments/assets/3ee4d5ab-db28-43dc-951a-25afe59001c0
 
 
 
