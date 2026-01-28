@@ -182,7 +182,7 @@ def main(cal_chin):
     cap = open_default_camera(1280, 720)
 
     # Compteurs pour les comportements (supposant ~30 FPS, 10s = 300 frames)
-    FPS_ESTIMATED = 10
+    FPS_ESTIMATED = 2.5
     THRESHOLD_FRAMES = 10 * FPS_ESTIMATED  # 300 frames pour 10 secondes
     count_posture = 0
     count_distraction = 0

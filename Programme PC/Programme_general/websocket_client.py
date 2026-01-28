@@ -42,7 +42,7 @@ def send_message(message):
     if connected and ws:
         try:
             ws.send(message)
-            print(f"[WebSocket] Message envoyé : {message}")
+            #print(f"[WebSocket] Message envoyé : {message}")
         except Exception as e:
             print(f"[WebSocket] Erreur envoi : {e}")
     else:
