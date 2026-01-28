@@ -54,7 +54,7 @@ There are **four physical prototypes**.
 - test early **role framing** (“pet” vs “monitor”) without committing to materials or mechanics  
 - quickly iterate silhouette (roundness, head size, flipper placement) for “baby-schema” readability :contentReference[oaicite:3]{index=3}
 
-**What you learned → what changed next:**  
+**What we learned → what changed next:**  
 Origami is great for proportions but can’t validate **mount points**, servo routing, or deformation. Next step required a rigid, printable geometry to start integrating mechanisms.
 
 ---
@@ -67,7 +67,7 @@ Origami is great for proportions but can’t validate **mount points**, servo ro
 - test **mechanical integration**: internal clearances, routing for eyelids/posture line, base interface  
 - verify “desk object” presence and camera placement constraints
 
-**What you learned → what changed next:**  
+**What we learned → what changed next:**  
 PLA validates geometry, but the interaction goal includes a **soft companion feel** (tactility + deformation). Rigid plastic reads more like a gadget/toy shell and limits lifelike slumping. Next step: silicone casting.
 
 ---
@@ -79,7 +79,7 @@ PLA validates geometry, but the interaction goal includes a **soft companion fee
 - explore **tactile affordances** (softness, warmth, “pet-like” handling)  
 - attempt deformation-driven motions (slump/breathing) via material compliance rather than only joints
 
-**What you learned → what changed next:**  
+**What we learned → what changed next:**  
 A **fully-solid silicone** body tends to be:
 - **too stiff / too massive** to deform visibly with small servos
 - harder to create predictable motion (deformation becomes “mushy” or barely noticeable)
@@ -171,9 +171,9 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
 - **2× servo motors**
   - posture/breathing (pull line)
   - eyelids (wire linkage)
-- Controller: **ESP32** 
-- Power supply appropriate for stepper + servos
-- Wires, connectors, optional level shifting depending on driver/controller
+- Controller: **ESP32 Devkit** 
+- Power supply 5V
+- Wires, connectors
 
 <img width="526" height="256" alt="Capture d’écran 2026-01-28 à 01 49 39" src="https://github.com/user-attachments/assets/73438a94-4a17-4cc0-b087-dc9652bd67ce" />
 
@@ -181,16 +181,14 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
 ### Mechanical
 - Rotating platform + gear assembly (for ice-floe metaphor)
 - Fishing-hole top reference (visual orientation cue)
-- Fishing line / thin cord (posture actuation)
-- Thin wire / thread for eyelids
-- Fasteners, bearings (as needed by your platform)
+- Trasnparent fishing line (posture actuation, eyelids)
   
 <img width="1091" height="698" alt="Capture d’écran 2026-01-28 à 01 50 16" src="https://github.com/user-attachments/assets/373e9a77-0816-4840-a1e8-bf5f49d122fd" />
 
 ### Fabrication
 - PLA filament (body core, base components, molds as needed)
 - Silicone: **Rebound 25** (skin)
-- Mold release + mixing supplies (cups, stir sticks, gloves)
+- Mold release spray + mixing supplies (cups, stir sticks, gloves)
 
 ---
 
@@ -202,17 +200,17 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
    - use the PLA model as the master
    - apply mold release
 3. Mix and brush/apply **Rebound 25** in layers to achieve a uniform skin thickness.
-4. Demold the skin and fit it onto the PLA core (trim flashing).
+4. Demold the skin.
 
 <img width="411" height="698" alt="Capture d’écran 2026-01-28 à 01 54 27" src="https://github.com/user-attachments/assets/d7ef77fe-bcd1-4406-aa74-ef242d6e9406" />
 
 
-**Why this works:** thin silicone skin gives visible deformation under low torque, while the PLA core keeps motion repeatable.
+**Why this works:** thin silicone skin gives visible deformation under low torque, while the PLA core allowed to keep motion repeatable.
 
 ### B) Assemble the base (rotation)
-1. Mount the stepper motor and gear/turntable.
+1. Mount the stepper motor, and platform.
 2. Ensure the base can rotate smoothly through the intended angle range (e.g., ~30° for “turn away”). :contentReference[oaicite:10]{index=10}
-3. Add a clear “fishing hole” orientation marker.
+3. Align Sealy with the platform to make it face the fishing hole.
 
 ### C) Add actuators
 - **Posture servo:** attach fishing line to a secure anchor on Sealy’s back; route line to servo horn so it can “pull” a controlled slump.
@@ -289,16 +287,9 @@ pip install opencv-python mediapipe ultralytics numpy websockets
    - Ensure both PC and ESP32 are on the same network
 
 **Hardware wiring:**
-- Connect servos to ESP32 GPIO pins (e.g., GPIO 18, 19)
-- Connect stepper motor driver to appropriate pins (e.g., STEP on GPIO 26, DIR on GPIO 27)
-- Use external power supply for motors (5V/12V depending on your motors)
-- **Never power motors directly from ESP32 pins** — use separate power with common ground
-- Recommended pins:
-  - Posture servo: GPIO 18
-  - Eyelid servo: GPIO 19
-  - Stepper STEP: GPIO 26
-  - Stepper DIR: GPIO 27
-
+- Connect servos to ESP32 GPIO pins (servo1 for slumping : 27, servo2 for eyelids : )
+- Connect stepper motor driver to appropriate pins (Pin1 : 13, Pin2 : 26, Pin3 : 25, Pin4 : 33) 
+- Use external power supply for motors 5V
 ---
 
 ## How to use
@@ -354,7 +345,7 @@ Evaluate whether **nonverbal ambient cues** from Sealy can:
 3. Maintain effectiveness over multi-day usage (habituation assessment)
 
 ### Study design (future work)
-- **Participants**: 5 workers (students/office workers)
+- **Participants**: 4 workers (students/office workers)
 - **Protocol**: 
   - Baseline session (no Sealy): 15-20 min focused task
   - Sealy session: 15-20 min focused task with Sealy active
@@ -365,7 +356,7 @@ Evaluate whether **nonverbal ambient cues** from Sealy can:
 
 
 ### Next steps
-- Test on 5 participant
+- Test on 4 participant
 - Long-term deployment (1 week) to assess habituation
 - Compare Sealy to explicit notifications (e.g., popup alerts) for perceived intrusiveness
 
