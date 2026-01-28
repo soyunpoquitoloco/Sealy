@@ -181,7 +181,7 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
 ### Mechanical
 - Rotating platform + gear assembly (for ice-floe metaphor)
 - Fishing-hole top reference (visual orientation cue)
-- Trasnparent fishing line (posture actuation, eyelids)
+- Transparent fishing line (posture actuation, eyelids)
   
 <img width="1091" height="698" alt="Capture d’écran 2026-01-28 à 01 50 16" src="https://github.com/user-attachments/assets/373e9a77-0816-4840-a1e8-bf5f49d122fd" />
 
@@ -195,7 +195,7 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
 ## Fabrication & assembly
 
 ### A) Build the body (Prototype 4 recommended)
-1. **3D print** the Sealy body core in PLA (and any internal brackets).
+1. **3D print** the Sealy body core in PLA and the other components.
 2. Prepare the **mold workflow** for a thin silicone skin:
    - use the PLA model as the master
    - apply mold release
