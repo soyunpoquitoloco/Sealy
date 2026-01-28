@@ -4,7 +4,9 @@
 Sealy is a small, seal-like desktop companion that supports focus through **low-demand, nonverbal mirroring**. Instead of notifications, scores, or “warnings,” Sealy uses **slow, peripheral, socially legible motions**:
 - **Posture drift →** Sealy subtly *slumps* to mirror you  
 - **Fatigue cues →** Sealy *gradually closes its eyelids*  
-- **Phone distraction →** Sealy *turns away* from its “fishing hole” by rotating its base  
+- **Phone distraction →** Sealy *turns away* from its “fishing hole” by rotating its base
+
+<img width="648" height="197" alt="Capture d’écran 2026-01-28 à 01 43 39" src="https://github.com/user-attachments/assets/7b37b1f8-72b7-4982-8c88-93978849a1e2" />
 
 This repo contains the **software**, **hardware notes**, and **fabrication assets** used to build and run Sealy.  
 (Technical and study protocol details are documented in the accompanying paper.) :contentReference[oaicite:0]{index=0}
@@ -40,6 +42,9 @@ This repo contains the **software**, **hardware notes**, and **fabrication asset
 ## Prototype iterations
 
 There are **four physical prototypes**. Below is the reasoning chain between each iteration—what you learned, what broke, and what that implied for the next build.
+
+<img width="972" height="451" alt="Capture d’écran 2026-01-28 à 01 42 11" src="https://github.com/user-attachments/assets/81a566bf-e288-450e-b8f0-e796fcd7b626" />
+
 
 ### Prototype 1 — Origami scale mock
 **What it was:** Paper origami seal.
@@ -143,8 +148,15 @@ Sealy uses on-device computer vision to estimate:
 
 ### State → behavior mapping (robot)
 - **Posture drift →** servo-driven “slump” (mirrors direction/weight)
+  
+<img width="1016" height="643" alt="Capture d’écran 2026-01-28 à 01 46 07" src="https://github.com/user-attachments/assets/d46f6c4a-a0c5-4195-b210-8be49647168e" />
+
 - **Fatigue →** eyelids gradually close; tempo reduces
+  
 - **Phone distraction →** base rotates away from the fishing hole :contentReference[oaicite:7]{index=7}
+  
+<img width="967" height="538" alt="Capture d’écran 2026-01-28 à 01 45 13" src="https://github.com/user-attachments/assets/0b8a2634-a277-4255-96c0-761df5a00654" />
+
 
 ### Comms
 PC runs a processing loop and transmits state to the device via a **WebSocket**-style connection for synchronized responses. :contentReference[oaicite:8]{index=8}
@@ -163,12 +175,17 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
 - Power supply appropriate for stepper + servos
 - Wires, connectors, optional level shifting depending on driver/controller
 
+<img width="526" height="256" alt="Capture d’écran 2026-01-28 à 01 49 39" src="https://github.com/user-attachments/assets/73438a94-4a17-4cc0-b087-dc9652bd67ce" />
+
+
 ### Mechanical
 - Rotating platform + gear assembly (for ice-floe metaphor)
 - Fishing-hole top reference (visual orientation cue)
 - Fishing line / thin cord (posture actuation)
 - Thin wire / thread for eyelids
 - Fasteners, bearings (as needed by your platform)
+  
+<img width="1091" height="698" alt="Capture d’écran 2026-01-28 à 01 50 16" src="https://github.com/user-attachments/assets/373e9a77-0816-4840-a1e8-bf5f49d122fd" />
 
 ### Fabrication
 - PLA filament (body core, base components, molds as needed)
@@ -186,6 +203,9 @@ PC runs a processing loop and transmits state to the device via a **WebSocket**-
    - apply mold release
 3. Mix and brush/apply **Rebound 25** in layers to achieve a uniform skin thickness.
 4. Demold the skin and fit it onto the PLA core (trim flashing).
+
+<img width="411" height="698" alt="Capture d’écran 2026-01-28 à 01 54 27" src="https://github.com/user-attachments/assets/d7ef77fe-bcd1-4406-aa74-ef242d6e9406" />
+
 
 **Why this works:** thin silicone skin gives visible deformation under low torque, while the PLA core keeps motion repeatable.
 
@@ -345,18 +365,20 @@ Evaluate whether **nonverbal ambient cues** from Sealy can:
 ## Media
 
 ### Photos
-> Add photos of physical prototypes (Prototype 1–4) here once uploaded to `/assets/`
+
+<img width="991" height="698" alt="Capture d’écran 2026-01-28 à 01 56 21" src="https://github.com/user-attachments/assets/de03eb11-d1a2-4d1c-893e-a65be9897c82" />
+
+<img width="991" height="698" alt="Capture d’écran 2026-01-28 à 01 56 45" src="https://github.com/user-attachments/assets/f5248241-8acc-4f07-b57d-e34adf70d022" />
+
 
 ### Demo videos
-> Add links to video demonstrations of:
-> - Posture mirroring behavior
-> - Fatigue eyelid closure
-> - Phone detection + base rotation
-> - Full interaction loop
+
+
 
 ### Design process
-> Document fabrication steps, CAD screenshots, silicone casting process photos
 
----
+<img width="634" height="394" alt="Capture_d_écran_2026-01-22_à_23 58 56-removebg-preview" src="https://github.com/user-attachments/assets/caf86437-e3d8-4fac-8a37-278a2cfef1d0" />
 
-**🦭 Built with care for human-centered interaction design.**
+<img width="634" height="394" alt="Capture_d_écran_2026-01-22_à_23 59 40-removebg-preview" src="https://github.com/user-attachments/assets/90a639d6-e530-4ade-a381-e57c18d820f7" />
+
+
