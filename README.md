@@ -358,8 +358,8 @@ Evaluate whether **nonverbal ambient cues** from Sealy can:
 ### Study design (future work)
 - **Participants**: 5 workers (students/office workers)
 - **Protocol**: 
-  - Baseline session (no Sealy): 45 min focused task
-  - Sealy session: 45 min focused task with Sealy active
+  - Baseline session (no Sealy): 15-20 min focused task
+  - Sealy session: 15-20 min focused task with Sealy active
   - Counterbalanced order (half start with Sealy, half without)
 - **Measures**:
   - **Quantitative**: posture deviation frequency, phone pickup count, eye closure duration (via logs)
